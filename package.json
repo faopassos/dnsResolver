@@ -1,0 +1,16 @@
+{
+  "name": "dns",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "is-ip": "^3.1.0"
+  }
+}
