@@ -9,7 +9,7 @@ resolver.setServers(['150.163.55.128']);
 const router = Router();
 
 router.get('/', (req, res) => {
-  return res.send({ usage: 'Only /getip or /getname routes' });
+  return res.json({ usage: 'Only /getip or /getname routes' });
 });
 
 router.get('/getip', (req, res) => {
@@ -22,7 +22,7 @@ router.get('/getip', (req, res) => {
 
   resolver.resolve4(name, (err, addressIp) => {
     if (err) {
-      return res.status(400).send({ Aviso: `No IP associated with (${name}) name.` });
+      return res.status(400).json({ Aviso: `No IP associated with (${name}) name.` });
     }
 
     return res.json({
@@ -47,7 +47,7 @@ router.get('/getname', (req, res) => {
 
   resolver.reverse(ip, (err, addressName) => {
     if (err) {
-      return res.status(400).send({ Aviso: `No name associated with (${ip}) IP.` });
+      return res.status(400).json({ Aviso: `No name associated with (${ip}) IP.` });
     }
 
     return res.json({
