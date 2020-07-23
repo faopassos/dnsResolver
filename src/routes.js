@@ -4,7 +4,7 @@ const isIp = require('is-ip');
 
 const resolver = new Resolver();
 
-resolver.setServers(['150.163.55.128']);
+resolver.setServers(['8.8.8.8']);
 
 const router = Router();
 
