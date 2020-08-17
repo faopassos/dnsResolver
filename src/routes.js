@@ -17,7 +17,7 @@ router.get('/getip', (req, res) => {
 
   if (!name) {
     return res.status(400)
-      .json({ error: "Mandatory send dns name, EX: 'getip/?name=www.inpe.br' " });
+      .json({ error: "Mandatory send dns name, EX: 'getip/?name=www.uol.com' " });
   }
 
   resolver.resolve4(name, (err, addressIp) => {
